@@ -45,6 +45,7 @@ def get_card_pool(search_str):  # PULL DATA FROM SEARCH LINK
         if jver["has_more"]:
             if printing: print("get_card_pool: has more...")
             html_string = url2str(jver["next_page"])
+            # cards += json.loads(url2str(jver["next_page"]))["data"]
         else:
             has_more = False
             if printing: print("get_card_pool: loop closed")
